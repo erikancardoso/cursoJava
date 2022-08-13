@@ -8,7 +8,4 @@ public class Banco{
     private List<Cliente> clientes = new ArrayList<>();
 
 
-
-
-
 }

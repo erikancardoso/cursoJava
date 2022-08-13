@@ -5,11 +5,9 @@ import java.util.Set;
 
 public class Cliente {
 	private String name;
-	private Set<Endereco> address = new HashSet<>();
+	private Endereco address;
 
-	public Cliente(String nome, Set<Endereco> endereco) {setNome(nome);
-		setEndereco(endereco);
-	}
+	public Cliente(String nome) {setNome(nome);}
 
 	public String getNome() {
 		return this.name;
@@ -18,17 +16,13 @@ public class Cliente {
 		this.name = nome;
 	}
 
-	public Set<Endereco> getEndereco() {
-		return address;
-	}
-	public void setEndereco(Set<Endereco> endereco) {
-		this.address = endereco;
-	}
+	public Endereco getAddress (){return this.address;}
+	public void setAddress (Endereco endereco){ this.address = endereco;}
 	@Override
 	public String toString() {
-		return "Cliente{" +
+		return "{" +
 				"nome='" + getNome() + '\'' +
-				", endereco=" + getEndereco() +
+				", endereco=" + getAddress() +
 				'}';
 	}
 }
